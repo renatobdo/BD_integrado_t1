@@ -1,0 +1,27 @@
+INSERT INTO Disciplina (codigo, nome, aluno_prontuario) VALUES 
+  (001, 'Matemática', 'GU0123456'),
+  (002, 'Português', 'GU1012345'),
+  (003, 'Biologia', 'GU1234500'),
+  (004, 'Física', 'GU123456'),
+  (005, 'História', 'GU1234567'),
+  (006, 'Geografia', 'GU21575X'),
+  (007, 'Química', 'GU21578X'),
+  (008, 'Artes', 'GU21579X'),
+  (009, 'Educação Física', 'GU2345678'),
+  (010, 'Inglês', 'GU2901234'),
+  (011, 'Filosofia', 'GU3456789'),
+  (012, 'Sociologia', 'GU3890123'),
+  (013, 'Literatura', 'GU4567890'),
+  (014, 'Redação', 'GU4789012'),
+  (015, 'Matemática', 'GU5678901'),
+  (016, 'Biologia', 'GU5678902'),
+  (017, 'Física', 'GU6567890'),
+  (018, 'História', 'GU6789012'),
+  (019, 'Artes', 'GU7456789'),
+  (020, 'Educação Física', 'GU7890123'),
+  (021, 'Inglês', 'GU8345678'),
+  (022, 'Filosofia', 'GU890123x'),
+  (023, 'Sociologia', 'GU9012345'),
+  (024, 'Literatura', 'GU9234567');
+  
+  select * from disciplina;

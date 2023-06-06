@@ -1,0 +1,21 @@
+INSERT INTO alunos (prontuario, nome, data_nascimento, genero, altura, peso, etnia)
+VALUES 
+('GU1234567', 'João Silva', '2005-02-15', 'M', 1.70, 65, 'Branca'),
+('GU2345678', 'Maria Santos', '2004-07-12', 'F', 1.60, 50, 'Parda'),
+('GU3456789', 'Pedro Souza', '2003-09-02', 'M', 1.80, 75, 'Preta'),
+('GU4567890', 'Ana Oliveira', '2005-05-20', 'F', 1.55, 48, 'Branca'),
+('GU5678901', 'Lucas Almeida', '2004-11-10', 'M', 1.75, 70, 'Indígena'),
+('GU6789012', 'Julia Costa', '2003-03-30', 'F', 1.68, 60, 'Amarela'),
+('GU7890123', 'Felipe Pereira', '2005-06-25', 'M', 1.72, 68, 'Branca'),
+('GU890123x', 'Gabriela Fernandes', '2004-04-18', 'F', 1.62, 52, 'Parda'),
+('GU9012345', 'Rafaela Santos', '2003-11-22', 'F', 1.67, 63, 'Branca'),
+('GU0123456', 'Gustavo Lima', '2005-01-05', 'M', 1.79, 72, 'Parda'),
+('GU1234567', 'Paulo Oliveira', '2004-08-15', 'M', 1.78, 74, 'Preta'),
+('GU2345678', 'Carolina Silva', '2003-12-02', 'F', 1.65, 55, 'Branca'),
+('GU3456789', 'Marcelo Souza', '2005-04-20', 'M', 1.83, 80, 'Indígena'),
+('GU4567890', 'Fernanda Santos', '2004-02-10', 'F', 1.58, 49, 'Amarela'),
+('GU5678901', 'Leonardo Almeida', '2003-07-30', 'M', 1.77, 71, 'Branca'),
+('GU6789012', 'Amanda Costa', '2005-09-25', 'F', 1.70, 62, 'Parda'),
+('GU7890123', 'Vinicius Pereira', '2004-05-18', 'M', 1.76, 69, 'Branca'),
+('GU8901234', 'Isabela Fernandes', '2003-02-22', 'F', 1.63, 54, 'Preta'),
+('GU9012345', 'Mariana Santos', '2005-10-05', 'F', 1.64, 57, 'Branca');

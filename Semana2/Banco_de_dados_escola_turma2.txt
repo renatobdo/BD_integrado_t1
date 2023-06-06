@@ -1,0 +1,60 @@
+CREATE TABLE aluno (
+  prontuario INTEGER PRIMARY KEY,
+  nome TEXT NOT NULL,
+  data_nascimento DATE NOT NULL,
+  altura REAL NOT NULL,
+  peso REAL NOT NULL,
+  etnia TEXT,
+  genero TEXT
+);
+CREATE TABLE disciplina (
+  codigo INTEGER PRIMARY KEY,
+  nome TEXT NOT NULL
+);
+CREATE TABLE pre_requisito (
+  numero INTEGER NOT NULL,
+  numero_disciplina INTEGER NOT NULL,
+  PRIMARY KEY (numero, numero_disciplina),
+  FOREIGN KEY (numero) REFERENCES disciplina(codigo),
+  FOREIGN KEY (numero_disciplina) REFERENCES disciplina(codigo)
+);
+CREATE TABLE turma (
+  codigo INTEGER PRIMARY KEY,
+  numero_disciplina INTEGER NOT NULL,
+  semestre TEXT NOT NULL,
+  ano INTEGER NOT NULL,
+  professor TEXT,
+  FOREIGN KEY (numero_disciplina) REFERENCES disciplina(codigo)
+);
+CREATE TABLE registro_nota (
+  codigo INTEGER PRIMARY KEY,
+  numero_aluno INTEGER NOT NULL,
+  nota REAL NOT NULL,
+  identificador_turma INTEGER NOT NULL,
+  FOREIGN KEY (numero_aluno) REFERENCES aluno(prontuario),
+  FOREIGN KEY (identificador_turma) REFERENCES turma(codigo)
+);
+
+
+INSERT INTO aluno (prontuario, nome, data_nascimento, altura, peso, etnia, genero)
+VALUES 
+  (1, 'João', '2001-05-10', 1.75, 70, 'Branca', 'Masculino'),
+  (2, 'Maria', '2002-06-12', 1.68, 58, 'Parda', 'Feminino'),
+  (3, 'Pedro', '2001-01-15', 1.83, 85, 'Branca', 'Masculino'),
+  (4, 'Ana', '2002-09-22', 1.70, 62, 'Parda', 'Feminino'),
+  (5, 'Lucas', '2000-03-05', 1.80, 75, 'Negra', 'Masculino'),
+  (6, 'Julia', '2003-12-28', 1.65, 55, 'Branca', 'Feminino'),
+  (7, 'Carlos', '2002-08-08', 1.78, 80, 'Parda', 'Masculino'),
+  (8, 'Camila', '2001-07-02', 1.60, 50, 'Negra', 'Feminino'),
+  (9, 'Fernando', '2000-11-20', 1.85, 90, 'Branca', 'Masculino'),
+  (10, 'Amanda', '2003-04-16', 1.70, 65, 'Parda', 'Feminino'),
+  (11, 'Gabriel', '2001-02-14', 1.79, 78, 'Branca', 'Masculino'),
+  (12, 'Luana', '2002-10-11', 1.67, 60, 'Negra', 'Feminino'),
+  (13, 'Márcio', '2000-09-07', 1.90, 100, 'Branca', 'Masculino'),
+  (14, 'Isabela', '2003-08-03', 1.68, 55, 'Parda', 'Feminino'),
+  (15, 'Vitor', '2001-06-22', 1.81, 80, 'Branca', 'Masculino'),
+  (16, 'Laura', '2002-04-19', 1.62, 52, 'Parda', 'Feminino'),
+  (17, 'Henrique', '2000-12-15', 1.84, 87, 'Negra', 'Masculino'),
+  (18, 'Beatriz', '2003-11-08', 1.70, 65, 'Branca', 'Feminino'),
+  (19, 'Rafael', '2001-10-04', 1.75, 75, 'Parda', 'Masculino'),
+  (20, 'Mariana', '2002-07-01', 1.63, 57, 'Negra', 'Feminino');
